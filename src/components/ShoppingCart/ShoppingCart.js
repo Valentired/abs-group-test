@@ -46,6 +46,8 @@ class ShoppingCart {
             </div>
         `;
         ROOT_SHOPPING.innerHTML = html;
+
+        shoppingCartPage.handleClickOnCartDel();
   }   
 }
 

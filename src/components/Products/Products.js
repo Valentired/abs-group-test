@@ -74,6 +74,8 @@ export class Products {
         `;
 
         ROOT_PRODUCTS.innerHTML = html;
+
+        productsPage.handleClickOnCartBtn();
     }
 }
 
