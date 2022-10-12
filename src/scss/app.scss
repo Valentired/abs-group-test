@@ -1,0 +1,99 @@
+$color-main: #0066B2;
+$color-accent: #2B2926;
+$color-unaccent: #9A9BA6;
+$color-background: #FCFCFC;
+$color-white: #ffffff;
+
+$font-family-main: "Open Sans";
+$font-family-second: 'Inter', sans-serif;
+$size-font-small: 14px;
+$size-font-medium: 16px;
+$size-font-large: 18px;
+$size-font-xlarge: 20px;
+$size-font-h1: 50px;
+
+$spacing-small: 10px;
+$spacing-medium: 20px;
+$spacing-large: 30px;
+$spacing-xlarge: 40px;
+$spacing-xxlarge: 50px;
+
+$border-radious: 5px;
+$box-shadow: 0px 17px 35px rgba(43, 41, 38, 0.1);
+$box-shadow-small: 0px 10px 10px -5px rgba(43, 41, 38, 0.03);
+
+%container {
+    margin-inline: auto;
+    max-width: 1220px;
+    width: 100%;
+}
+
+
+*, 
+::before,
+::after {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: $font-family-main;
+    font-size: $size-font-large;
+    background-color: $color-background;
+}
+
+@import './reset';
+@import '../components/Header/Header';
+@import '../components/Products/Products';
+@import '../components/CatalogMenu/CatalogMenu';
+@import '../components/ShoppingCart/ShoppingCart';
+
+
+.content {
+    @extend %container;
+    display: flex;    
+    column-gap: $spacing-large;
+    row-gap: $spacing-xlarge;
+}
+
+.sidebars {
+    display: flex;
+    flex-flow: column wrap;
+    gap: $spacing-xlarge;
+    min-width: 280px;
+}
+
+.sidebar {
+    border-radius: $border-radious;
+    box-shadow: $box-shadow-small;
+    background-color: $color-white;
+}
+
+.sidebar__header {
+    padding: 15px 20px 15px 50px;
+    background-color: $color-main;
+    color: $color-white;
+    font-size: $size-font-xlarge;
+    border-radius: $border-radious;
+}
+
+.sidebar__header-text {
+    position: relative;
+    line-height: 1.5;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: -35px;
+        transform: translateY(-50%);
+        display: block;
+        width: 25px;
+        height: 25px;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+
+@import './media';

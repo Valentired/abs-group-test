@@ -1,0 +1,52 @@
+.header {
+    @extend %container;
+    padding-block: $spacing-xxlarge;
+}
+
+.breadcrumbs-list {
+    display: flex; 
+    flex-flow: row wrap;
+    column-gap: 35px;
+    font-size: $size-font-small;
+}
+
+.breadcrumbs-list__item {
+    position: relative;
+
+    a {
+        color: $color-unaccent;
+        line-height: 1.42;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: -29px;
+        transform: translateY(-50%);
+        display: block;
+        width: 24px;
+        height: 24px;
+        background-image: url('../images/icons/chevron-right-icon.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    &--current {
+        &::before{
+            display: none;
+        }
+        a {
+            color: $color-accent;
+        }
+    }
+}
+
+.page-title {
+    padding-block: 15px;
+    font-size: $size-font-h1;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+.header__products-count {
+    color: $color-unaccent;
+}

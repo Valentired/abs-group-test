@@ -1,0 +1,32 @@
+.catalog-menu__header-text {
+    &::before {
+        background-image: url('../images/icons/catalog-icon.svg');
+    }
+}
+
+.catalog-menu__content {
+    padding: $spacing-medium;
+    font-size: $size-font-medium;
+    line-height: 1.875;
+    color: $color-accent;
+    font-family: $font-family-second;
+}
+
+.catalog-menu__item:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.catalog-menu__item-link {
+    color: inherit;
+    transition: .3s;
+    font-weight: 500;
+
+    &:hover {
+        color: $color-main;
+    }
+
+    &--active {
+        color: $color-main;
+    }
+}
+

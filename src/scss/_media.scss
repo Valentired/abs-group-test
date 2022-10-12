@@ -1,0 +1,25 @@
+@media screen and (max-width: 1220px) {
+    %container {
+        padding-inline: $spacing-medium;
+    }
+
+    .product {
+        width: 47%
+    }
+}
+
+@media screen and (max-width: 958px) {
+    .content {
+        flex-flow: column wrap;
+    }
+
+    .product {
+        min-width: 280px;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .products__wrapper {
+        justify-content: center;
+    }
+}
