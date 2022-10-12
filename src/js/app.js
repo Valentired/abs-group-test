@@ -24,6 +24,7 @@ componentsRender();
 
 function componenstHandler() {
     productsPage.handleClickOnCartBtn();
+    shoppingCartPage.handleClickOnCartDel();
 }
 
 componenstHandler();

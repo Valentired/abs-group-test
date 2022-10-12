@@ -29,15 +29,7 @@ $box-shadow-small: 0px 10px 10px -5px rgba(43, 41, 38, 0.03);
 }
 
 
-*, 
-::before,
-::after {
-    box-sizing: border-box
-}
-
 body {
-    margin: 0;
-    padding: 0;
     font-family: $font-family-main;
     font-size: $size-font-large;
     background-color: $color-background;

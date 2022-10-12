@@ -1,10 +1,24 @@
 import { CATALOG_ITEMS } from '../../constants/catalog';
 import { localStorageUtil } from '../../utils/localStorageUtil'
 import { ROOT_SHOPPING } from '../../constants/root';
+import {productsPage} from '../Products/Products'
 
 class ShoppingCart {
     handleClear() {
         ROOT_SHOPPING.innerHTML = '';
+    }
+
+    handleClickOnCartDel() {
+        const productCartDel = document.querySelectorAll("#shopping_cart_item_close");
+
+        productCartDel.forEach(element => {
+            element.addEventListener("click", (e) => {
+                const elemClicked = e.target;
+                let elemId = elemClicked.getAttribute("data-product-id");
+                productsPage.handleSetLocationStorage(elemClicked, elemId);
+            });
+        });
+
     }
 
     render() {
@@ -16,7 +30,7 @@ class ShoppingCart {
 				htmlCatalog += `
                     <li class="shopping-cart__item">
                        <span>${name}</span>
-                       <img class="shopping-cart__item-close" src="./dist/images/icons/close-icon.png" onclick="productsPage.handleSetLocationStorage(this, '${id}')">
+                       <img id="shopping_cart_item_close" class="shopping-cart__item-close" data-product-id="${id}" src="./dist/images/icons/close-icon.png">
                     </li>
                 `;
 			}
