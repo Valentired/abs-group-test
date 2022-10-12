@@ -1,3 +1,7 @@
+import { CATALOG_ITEMS } from '../../constants/catalog';
+import { localStorageUtil } from '../../utils/localStorageUtil'
+import { ROOT_SHOPPING } from '../../constants/root';
+
 class ShoppingCart {
     handleClear() {
         ROOT_SHOPPING.innerHTML = '';
@@ -31,4 +35,4 @@ class ShoppingCart {
   }   
 }
 
-const shoppingCartPage = new ShoppingCart();
+export const shoppingCartPage = new ShoppingCart();

@@ -1,10 +1,13 @@
+import { CATALOG_ITEMS } from "../../constants/catalog";
+import {ROOT_HEADER} from "../../constants/root"
+
 class Header {
-    constructor() {
-        this.productsCountValue = CATALOG_ITEMS.length;
-    }
-    render(count) {
-        let productsCount = this.productsCountValue;
-        const html = `
+	constructor() {
+		this.productsCountValue = CATALOG_ITEMS.length;
+	}
+	render() {
+		let productsCount = this.productsCountValue;
+		const html = `
             <ul class="breadcrumbs-list">
                 <li class="breadcrumbs-list__item">
                     <a href="/">Главная</a>
@@ -21,10 +24,8 @@ class Header {
                 Найдено ${productsCount} товаров
             </div>
         `;
-        ROOT_HEADER.innerHTML = html;
-    }
-
+		ROOT_HEADER.innerHTML = html;
+	}
 }
 
-const headerPage = new Header;
-
+export const headerPage = new Header();

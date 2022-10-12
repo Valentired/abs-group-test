@@ -1,4 +1,4 @@
-const CATALOG_ITEMS = [
+export const CATALOG_ITEMS = [
 	{
 		id: "el1",
 		name: "Масло моторное Mobil 1 ESP 5W-30",
@@ -78,7 +78,7 @@ const CATALOG_ITEMS = [
 ];
 
 
-const CATALOG_CATEGORIES = [
+export const CATALOG_CATEGORIES = [
 	{
 		id: "index",
 		name: "Для легковых авто",

@@ -14,20 +14,20 @@ class LocalStorageUtil {
 
     putProducts(id) {
         let products = this.getProducts();
-        let pushProduct = false;
+        let isAddedProduct = false;
         const index = products.indexOf(id)
 
         if (index === -1) {
             products.push(id);
-            pushProduct = true;
+            isAddedProduct = true;
         } else {
             products.splice(index, 1);
         }
         
         localStorage.setItem(this.keyName, JSON.stringify(products));
 
-        return { pushProduct, products };
+        return { isAddedProduct, products };
     }
 }
 
-const localStorageUtil = new LocalStorageUtil();
+export const localStorageUtil = new LocalStorageUtil();

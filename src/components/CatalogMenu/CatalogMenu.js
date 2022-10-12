@@ -1,3 +1,6 @@
+import {CATALOG_CATEGORIES} from '../../constants/catalog'
+import { ROOT_CATALOG_MENU } from '../../constants/root'
+
 class CatalogMenu {
 	constructor() {
 		this.classNameActive = " catalog-menu__item-link--active";
@@ -41,4 +44,4 @@ class CatalogMenu {
 	}
 }
 
-const catalogMenuPage = new CatalogMenu();
+export const catalogMenuPage = new CatalogMenu();
